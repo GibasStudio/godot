@@ -71,6 +71,7 @@ private:
 	HashSet<String> selected_files;
 	HashMap<String, FileExportMode> customized_files;
 	bool runnable = false;
+	bool pure = false;
 	bool advanced_options_enabled = false;
 	bool dedicated_server = false;
 
@@ -128,6 +129,9 @@ public:
 
 	void set_runnable(bool p_enable);
 	bool is_runnable() const;
+
+	void set_pure(bool p_enable);
+	bool is_pure() const;
 
 	void set_advanced_options_enabled(bool p_enabled);
 	bool are_advanced_options_enabled() const;

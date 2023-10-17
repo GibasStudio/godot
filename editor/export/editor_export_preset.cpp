@@ -229,6 +229,15 @@ bool EditorExportPreset::is_runnable() const {
 	return runnable;
 }
 
+void EditorExportPreset::set_pure(bool p_enable) {
+	pure = p_enable;
+	EditorExport::singleton->save_presets();
+}
+
+bool EditorExportPreset::is_pure() const {
+	return pure;
+}
+
 void EditorExportPreset::set_advanced_options_enabled(bool p_enabled) {
 	if (advanced_options_enabled == p_enabled) {
 		return;
